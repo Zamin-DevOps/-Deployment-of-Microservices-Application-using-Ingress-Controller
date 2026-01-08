@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         DOCKER_HUB_REPO = 'zamin8173/microservices-ingress'
-        K8S_CLUSTER_NAME = 'kastro-cluster'
-        AWS_REGION = 'us-east-1'
+        K8S_CLUSTER_NAME = 'zamin-cluster'
+        AWS_REGION = 'eu-west-1'
         NAMESPACE = 'default'
         APP_NAME = 'techsolutions'
     }
