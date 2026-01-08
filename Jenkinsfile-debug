@@ -1,0 +1,25 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Debug Environment') {
+            steps {
+                echo 'Checking environment...'
+                sh 'whoami'
+                sh 'docker --version || echo "Docker not found"'
+                sh 'aws --version || echo "AWS CLI not found"'
+                sh 'kubectl version --client || echo "kubectl not found"'
+                sh 'pwd'
+                sh 'ls -la'
+            }
+        }
+        
+        stage('Test Git Checkout') {
+            steps {
+                echo 'Testing git checkout...'
+                git branch: 'main', url: 'https://github.com/Zamin-DevOps/-Deployment-of-Microservices-Application-using-Ingress-Controller.git'
+                sh 'ls -la'
+            }
+        }
+    }
+}

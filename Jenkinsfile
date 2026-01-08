@@ -13,7 +13,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out source code...'
-                git 'https://github.com/Zamin-DevOps/-Deployment-of-Microservices-Application-using-Ingress-Controller.git'
+                git branch: 'main', url: 'https://github.com/Zamin-DevOps/-Deployment-of-Microservices-Application-using-Ingress-Controller.git'
             }
         }
 
