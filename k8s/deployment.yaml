@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: techsolutions
-        image: kastrov/techsolutions-app:latest
+        image: zamin8173/microservices-ingress:latest
         ports:
         - containerPort: 80
         resources:
