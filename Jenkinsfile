@@ -119,15 +119,15 @@ pipeline {
                         echo ""
                         echo "Available Paths:"
                         echo "- Home Page: ${env.INGRESS_URL}/"
-                        echo "- About Page: ${env.INGRESS_URL}/about"
-                        echo "- Services Page: ${env.INGRESS_URL}/services"
-                        echo "- Contact Page: ${env.INGRESS_URL}/contact"
+                        echo "- About Page: ${env.INGRESS_URL}/about.html"
+                        echo "- Services Page: ${env.INGRESS_URL}/services.html"
+                        echo "- Contact Page: ${env.INGRESS_URL}/contact.html"
                         echo "========================================="
 
                         sh "curl -I ${env.INGRESS_URL}/ || echo 'Home page check failed'"
-                        sh "curl -I ${env.INGRESS_URL}/about || echo 'About page check failed'"
-                        sh "curl -I ${env.INGRESS_URL}/services || echo 'Services page check failed'"
-                        sh "curl -I ${env.INGRESS_URL}/contact || echo 'Contact page check failed'"
+                        sh "curl -I ${env.INGRESS_URL}/about.html || echo 'About page check failed'"
+                        sh "curl -I ${env.INGRESS_URL}/services.html || echo 'Services page check failed'"
+                        sh "curl -I ${env.INGRESS_URL}/contact.html || echo 'Contact page check failed'"
                     }
                 }
             }
